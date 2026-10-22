@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, ChevronDown, CheckCircle2, MapPin, Calendar, Sparkles } from 'lucide-react';
 import heroImg from '../assets/images/hero_pesantren_kautsar_1792641254554.jpg';
+import logoImg from '../assets/logo-telaga-alkautsar.png';
 import { IslamicPattern } from './IslamicPattern';
 
 interface HeroSectionProps {
@@ -27,16 +28,26 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenPPDB }) => {
       {/* Main Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-auto w-full py-12 md:py-16">
         <div className="max-w-3xl">
-          {/* Label Kecil (Quiet inline metadata, zero-pill discipline) */}
-          <div className="inline-flex items-center gap-2 text-xs md:text-sm font-medium text-amber-300 mb-6 tracking-wide uppercase">
-            <span className="flex items-center gap-1.5 font-semibold">
-              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
-              Pendidikan Al-Qur'an
-            </span>
-            <span aria-hidden="true" className="text-amber-500/60 font-bold">•</span>
-            <span>Kepemimpinan</span>
-            <span aria-hidden="true" className="text-amber-500/60 font-bold">•</span>
-            <span>Teknologi</span>
+          {/* Brand Emblem & Label */}
+          <div className="flex items-center gap-3.5 mb-6">
+            <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-amber-400/50 bg-white p-0.5 shadow-lg">
+              <img
+                src={logoImg}
+                alt="Logo Pesantren Telaga Al Kautsar"
+                className="w-full h-full object-cover rounded-full"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+            <div className="inline-flex flex-wrap items-center gap-2 text-xs md:text-sm font-medium text-amber-300 tracking-wide uppercase">
+              <span className="flex items-center gap-1.5 font-semibold">
+                <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+                Pendidikan Al-Qur'an
+              </span>
+              <span aria-hidden="true" className="text-amber-500/60 font-bold">•</span>
+              <span>Kepemimpinan</span>
+              <span aria-hidden="true" className="text-amber-500/60 font-bold">•</span>
+              <span>Teknologi</span>
+            </div>
           </div>
 
           {/* Headline - Primary Focal Anchor */}

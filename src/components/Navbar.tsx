@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import { INSTITUTION_INFO } from '../data/schoolData';
+import logoImg from '../assets/logo-telaga-alkautsar.png';
 
 interface NavbarProps {
   onOpenPPDB: () => void;
@@ -37,17 +38,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPPDB }) => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-8">
-          {/* Zone 1: Brand Wordmark & Subtle Islamic Emblem */}
+          {/* Zone 1: Brand Wordmark & Official Circular Logo */}
           <a
             href="#beranda"
             className="flex items-center gap-3 shrink-0 group focus-visible:outline-2 focus-visible:outline-blue-900 rounded-md"
             aria-label="Pesantren Tahfidz Telaga Al Kautsar Beranda"
           >
-            <div className="w-10 h-10 rounded-xl bg-blue-950 flex items-center justify-center text-amber-400 shadow-xs border border-blue-900 group-hover:bg-blue-900 transition-colors">
-              {/* Islamic Star Octagram Icon */}
-              <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2L14.7 6.5L19.8 4.2L18.7 9.7L23.4 12L18.7 14.3L19.8 19.8L14.7 17.5L12 22L9.3 17.5L4.2 19.8L5.3 14.3L0.6 12L5.3 9.7L4.2 4.2L9.3 6.5L12 2Z" />
-              </svg>
+            <div className="w-11 h-11 rounded-full overflow-hidden shrink-0 border border-slate-200 shadow-xs bg-white flex items-center justify-center p-0.5 group-hover:scale-105 transition-transform">
+              <img
+                src={logoImg}
+                alt="Logo Pesantren SMP Islam Terpadu Telaga Al Kautsar"
+                className="w-full h-full object-cover rounded-full"
+                referrerPolicy="no-referrer"
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-base font-bold tracking-tight text-blue-950 group-hover:text-blue-900 transition-colors whitespace-nowrap">

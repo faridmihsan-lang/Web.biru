@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, MapPin, Instagram, Facebook, ArrowUpRight } from 'lucide-react';
 import { INSTITUTION_INFO } from '../data/schoolData';
+import logoImg from '../assets/logo-telaga-alkautsar.png';
 
 interface FooterProps {
   onOpenPPDB: () => void;
@@ -14,10 +15,13 @@ export const Footer: React.FC<FooterProps> = ({ onOpenPPDB }) => {
           {/* Col 1: Identity & Description (Col 5) */}
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-blue-900 flex items-center justify-center text-amber-400 border border-blue-800">
-                <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2L14.7 6.5L19.8 4.2L18.7 9.7L23.4 12L18.7 14.3L19.8 19.8L14.7 17.5L12 22L9.3 17.5L4.2 19.8L5.3 14.3L0.6 12L5.3 9.7L4.2 4.2L9.3 6.5L12 2Z" />
-                </svg>
+              <div className="w-12 h-12 rounded-full overflow-hidden shrink-0 border border-slate-700 bg-white p-0.5 shadow-md flex items-center justify-center">
+                <img
+                  src={logoImg}
+                  alt="Logo Pesantren SMP Islam Terpadu Telaga Al Kautsar"
+                  className="w-full h-full object-cover rounded-full"
+                  referrerPolicy="no-referrer"
+                />
               </div>
               <div>
                 <span className="text-base font-bold text-white block">
